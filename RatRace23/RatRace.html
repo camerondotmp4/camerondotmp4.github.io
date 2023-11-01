@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Some Memorable Movies</h1>
+<h3><span class="ital">Rat Race</span> (Cameron Wise, 2023)</h3>
+<div class="sideBySide">
+<img class="filmStill" onClick="onClick_DTRT_img01()" src="images/ratrace1.jpeg" alt="The Making of Rat Race 1">
+<img class="filmStill" onClick="onClick_DTRT_img02()" src="images/ratrace2.jpeg" alt="The Making of Rat Race 2">
+<img class="filmStill" onClick="onClick_DTRT_img03()" src="images/ratrace3.jpeg" alt="The Making of Rat Race 3">
+</div>
+<p class="filmInfo" id="DTRT_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt optio, sed quas autem provident possimus omnis ex, voluptates illum dolor accusamus deserunt nulla sit, officiis eius hic perspiciatis corporis molestiae quidem esse recusandae. Cumque iure fugit iusto molestias impedit aut quaerat amet veniam, magnam nobis, magni obcaecati? Vitae, veniam, vel.</p>
+	
+<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Go to the movie</button>
+		
+<script>
+	
+var gotoMovie_btn = document.getElementById("gotoMovie_btn");
+gotoMovie_btn.style.visibility = "hidden"
+	
+var img01_clicked = false;
+var img02_clicked = false;
+var img03_clicked = false;
+	
+var DTRT_text = document.getElementById("DTRT_text")	
+var DTRT00 = "Rat Race is a film I made for Film 180 during my freshman year at UWM. It follows a college student unhappy with how slow life is. To escape, he goes and wrecklessly drives, only to learn his lesson after being pulled over by the police."
+
+DTRT_text.innerHTML = DTRT00;
+DTRT_text2.innerHTML = DTRT01;
+	
+//// RatRace Section ////
+	
+function onClick_DTRT_img01(){
+	DTRT_text.innerHTML = "This is the thumbnail for my short film Rat Race that I made for Film 180 last year. I imagine if there was a movie poster, it would look something like this.";
+	img01_clicked = true;
+	console.log("img01_clicked = " + img01_clicked);
+	revealButton() ;
+}
+
+function onClick_DTRT_img02(){
+	DTRT_text.innerHTML = "This is the main character walking towards his dorms. This is Sandburg, when we filmed the interior dorm scene in Cambridge Commons, which I think is prety funny.";
+	img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+	revealButton();
+}
+
+function onClick_DTRT_img03(){
+	DTRT_text.innerHTML = "This is a close up shot of the main character's eyes. I really wanted to show his intense focus on the game he's playing in the scene, GTA V.";
+	img03_clicked = true;
+	console.log("img03_clicked = " + img03_clicked);
+	revealButton();
+}
+	
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log("REVEAL BUTTON");
+		gotoMovie_btn.style.visibility = "visible";
+		
+	}
+}
+	
+function gotoMovie(){
+	window.open("https://youtu.be/JyeSjNyHaS4?si=6UxndrJ1TEtKVov2", "_blank");
+}
+	
+	</script>
+</html>
+
+

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.ital {
+    font-style: italic;
+}
+.filmStill {
+    width: 500px;
+    border-style: solid;
+    border-width: medium;
+}
+.sideBySide {
+    display: flex;
+}
+.filmInfo {
+    border-style: solid;
+}
