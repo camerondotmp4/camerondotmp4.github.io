@@ -1,0 +1,7 @@
+.SidebySide {
+    display: flex;
+}
+.255img {
+    width: 400px;
+    border-style: solid;
+}
