@@ -1,0 +1,19 @@
+@charset "UTF-8";
+#displayed_vid {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.centered_text {
+	position: relative;
+	text-align: center;
+	justify-content: center;
+    margin-top: 10vh;
+}
+#truism {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #FFA800;
+    text-shadow: 0 0 37px #FFFFFF;
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/truisms.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div>
+  <video id="displayed_vid" muted="muted" autoplay="autoplay" loop="loop" >
+    <source src="video/Truism_Video.mp4" type="video/mp4">
+  </video>
+</div>
+	
+<div class="centered_text">
+<h1 id="truism" onMouseOver="OnTruismText()" onMouseOut="outTruismText()" onClick="changeVideo()">ILLNESS IS A STATE OF MIND</h1>
+</div>
+	
+<script>
+	
+var channel = 1;
+var pausedAt = 0;
+	
+//reference to the video element
+
+var displayed_video = document.getElementById("displayed_vid")
+
+//stuff for sound
+	
+var mySound = new Audio("sounds/TruismAudio1(Rain).mp3");
+	
+//references to the videos
+	
+var brainOutside = "video/Truism_Video.mp4"
+var brainCouch = "video/Truism_VideoTWO.mp4"
+	
+function OnTruismText(){
+	console.log ("clicked truism text");
+	document.getElementById("displayed_vid").style.filter = "blur(10px)";
+}
+	
+function outTruismText(){
+	console.log("moving out of truism text")
+	document.getElementById("displayed_vid").style.filter = "blur(0px)";
+}
+	
+function changeVideo(){
+	console.log("will change video");
+	pausedAt = displayed_video.currentTime;
+	if (channel == 0){
+		displayed_video.src = brainOutside;
+		displayed_video.currentTime = pausedAt;
+		channel = 1;
+	}
+	else{
+		displayed_video.src = brainCouch;
+		displayed_video.currentTime = pausedAt;
+		channel = 0;
+	}
+	
+	mySound.play();
+}
+
+</script>
+	
+	
+</body>
+</html>
