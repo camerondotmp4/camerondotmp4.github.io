@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>True Ending!</title>
+<link href="css/CYOA_sample.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+    background-color: #000000;
+}
+</style>
+</head>
+
+<body>
+<!-- THE TITLE ABOVE THE VIDEO -->
+
+<h1> CAMERON and the DJI DUNGEON </h1>
+
+<!-- THE VIDEO -->
+
+<div class = "vidCenter">    
+<video id="displayedVideo" preload="auto" controls>
+<source src="videos/Page 9.mp4" type="video/mp4">
+</video>
+</div>
+	
+<p id="caption">
+You got the TRUE ENDING, and helped Cameron find the DJI Wireless Lapel Microphones sucessfully!</p>
+<p id="caption2">
+Credits to jeti for the Kiwi Soda font.</p>
+<script>
+
+    document.getElementById('displayedVideo').addEventListener('ended',whenVideoEnds,false);
+        
+    var topBTN = document.getElementById("topBTN");
+    var bottomBTN = document.getElementById("bottomBTN"); 
+   
+    var caption = document.getElementById("caption");
+	var caption2 = document.getElementById("caption2")
+
+    caption.style.display = 'none'; 
+	caption2.style.display = 'none';
+    topBTN.style.display = 'none';
+    bottomBTN.style.display = 'none';        
+
+    function whenVideoEnds(e) {
+		// these three commands make the caption and the 2 buttons visible
+        caption.style.display = 'block';
+		caption2.style.display = 'block'; 
+        topBTN.style.display = 'block';
+        bottomBTN.style.display = 'block';
+    }
+        
+		// MAKE SURE THE WINDOW OPENS THE FILE NAME on YOUR DIRECTORY 
+		// Lines 63 and 64 are the only places you have to make a change
+    function buttonOne() {
+        window.open ('scene1_choice1.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open ('scene1_choice2_mists.html','_self',false)
+    }    
+	
+	</script>
+
+</body>
+</html>
